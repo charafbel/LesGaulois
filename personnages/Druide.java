@@ -22,6 +22,6 @@ public class Druide {
 	}
 	
 	private String prendreParole() {
-	      return "Le druide " + nom + " : ";
+	      return "Le druide " + nom + " du village: ";
 	}
 }
