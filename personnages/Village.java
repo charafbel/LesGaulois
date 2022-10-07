@@ -33,4 +33,9 @@ public class Village {
 		nbVillageois++;
 		
 	}
+	
+	public void trouverHabitant(int nVillageois, int nbVillageoisMaximum, Gaulois[] villageois) {
+		for (int i=0 ; i<nbVillageoisMaximum ; i++) {
+		}
+	}
 }
