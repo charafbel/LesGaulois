@@ -16,7 +16,7 @@ public class Gaulois {
 		return nom;
 	}
 	
-	private void parler(String texte) {
+	public void parler(String texte){
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 	
