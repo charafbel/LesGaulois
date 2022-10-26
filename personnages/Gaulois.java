@@ -6,7 +6,7 @@ public class Gaulois {
 	private int effetPotion = 1;
 	private int forcePotion = 0;
 	
-	public Gaulois(String nom, int force, int effetPotion) {
+	public Gaulois(String nom, int force) {
 		super();
 		this.nom = nom;
 		this.force = force;
@@ -44,7 +44,7 @@ public class Gaulois {
 	}
 
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("asterix", 8, 1);
+		Gaulois asterix = new Gaulois("asterix", 8);
 		System.out.println(asterix);
 	}
 }
