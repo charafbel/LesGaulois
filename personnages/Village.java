@@ -23,10 +23,9 @@ public class Village {
 	}
 	
 	
-	public void setChef(Chef chef) 
+	public void setChef(Chef chef){
 		this.chef = chef;
 	}
-
 
 	public void ajouterHabitant(Gaulois gaulois, Gaulois[] villageois) {
 		villageois.add(gaulois);

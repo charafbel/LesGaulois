@@ -23,18 +23,20 @@ public class scenario {
 	}
 	
 	
-
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("asterix", 8, 1);
+		Gaulois obelix = new Gaulois("Obélix", 9, 1);
 		Romain minus = new Romain("Minus", 6);
-		asterix.parler("Bonjour a tous !");
-		minus.parler("UN GAU... UN GAUGAU...");
+		Druide panoramix = new Druide("Panoramix", 5, 10);
+		panoramix.parler("Je vais aller préparer une petite potion...");
+		panoramix.preparerPotion(5, 10);
+		panoramix.booster(obelix);
+		obelix.parler("Par Bélénos, ce n'est pas juste");
+		asterix.parler("Bonjour");
+		panoramix.booster(asterix);
+		minus.parler("Un Gau... Un GAUGAU...");
 		asterix.frapper(minus);
-		minus.parler("Aïe");
 		asterix.frapper(minus);
-		minus.parler("Aïe");
 		asterix.frapper(minus);
-		minus.parler("J'abandonne");
 	}
-
 }
