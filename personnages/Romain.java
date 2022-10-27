@@ -52,6 +52,8 @@ public class Romain {
 		case 2:		
 			System.out.println(getNom()+" est deja bien protégé");
 			break;
+		default:
+			System.out.println(getNom()+" n'est pas equipé");
 		}
 	}
 	
@@ -68,9 +70,10 @@ public class Romain {
 	    //     equipementEjecte = ejecterEquipement();
 	    //     parler("J'abandonne...");
         //}
-        switch (force) {
+        switch(force){
         case 0:
              parler("Aïe");
+             break;
         default:
             equipementEjecte = ejecterEquipement();
             parler("J'abandonne...");
@@ -84,18 +87,16 @@ public class Romain {
 	private int CalculResistanceEquipement(int forceCoup) {
         texte = "Ma force est  de " + this.force + ", et la force du coup est de " + forceCoup;
         int resistanceEquipement = 0;
-        if (!(nbEquipement == 0)) {
+        if (nbEquipement != 0) {
              texte += "\nMais heureusement, grace à mon équipement sa force est diminué de ";
              for (int i = 0; i < nbEquipement;) {
-                  if ((equip[i] != null && equip[i].equals(Equipement.BOUCLIER)) == true) {
+                  if ((equip[i] != null && equip[i].equals(Equipement.BOUCLIER))) {
                        resistanceEquipement += 8;
                   } else {
                        System.out.println("Equipement casque");
                        resistanceEquipement += 5;
-                  }
-                  i++; 
-                  }
-             texte =+ resistanceEquipement + "!";
+                  }}
+             texte += resistanceEquipement + "!";
         }
         parler(texte);
         forceCoup -= resistanceEquipement;
@@ -104,7 +105,7 @@ public class Romain {
 
 	private Equipement[] ejecterEquipement() {
 		Equipement[] equipementEjecte = new Equipement[nbEquipement];
-		System.out.println("L'équipement de " + nom.toString() + "s'envole sous la force du coup.");
+		System.out.println("L'équipement de " + nom + "s'envole sous la force du coup.");
 		// TODO
 		int nbEquipementEjecte = 0;
 		for (int i = 0; i < nbEquipement; i++) {
