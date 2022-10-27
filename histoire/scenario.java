@@ -4,7 +4,7 @@ import personnages.Chef;
 import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Romain;
-import personnages.Village;
+import personnages.Village;	
 
 public class scenario {
 	private Chef chef;
@@ -35,8 +35,6 @@ public class scenario {
 		asterix.parler("Bonjour");
 		panoramix.booster(asterix);
 		minus.parler("Un Gau... Un GAUGAU...");
-		asterix.frapper(minus);
-		asterix.frapper(minus);
 		asterix.frapper(minus);
 	}
 }
