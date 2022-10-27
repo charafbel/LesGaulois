@@ -31,9 +31,26 @@ public class Romain {
 	    	  parler("J'abandonne...");}
 	}
 	
-	public static void main() {
-		Romain romain = new Romain("name", 2);
-		romain.equip[nbEquipement] = Equipement.Bouclier;
-		System.out.println(romain.equip[]);
+	public void sEquiper (Equipement newEquip) {
+		switch(nbEquipement){
+		case 0 : 
+			equip[0] = newEquip;
+			nbEquipement ++;
+			System.out.println("Le soldat " + getNom() +" s'équipe avec un/une "+ newEquip.toString());
+			break;
+		case 1 : 	
+			if(newEquip == equip[0]) {
+				System.out.println("Le soldat "+ getNom()+" posséde déja un "+ equip[0].toString()+" !");
+			}
+			else{
+				equip[1] = newEquip;
+				nbEquipement ++;
+				System.out.println("Le soldat " + getNom() +" s'équipe avec un/une "+ newEquip.toString());
+			}
+			break;
+		case 2:		
+			System.out.println(getNom()+" est deja bien protégé");
+			break;
+		}
 	}
 }
